@@ -19,7 +19,7 @@ data:
   QUEUE_DRIVER: redis
   {{- if .Values.redis.externalHost }}
   REDIS_HOST: {{ .Values.redis.externalHost }}
-  {{- else -}}
+  {{- else }}
   REDIS_HOST: {{ .Release.Name }}-redis-headless
   {{- end }}
   {{- if .Values.mariadb.externalHost }}
